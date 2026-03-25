@@ -15,7 +15,7 @@ entity Products {
 
 };
 
-entity Supplier {
+entity Suppliers {
     key ID         : String(10);
         Name       : String;
         Street     : String;
@@ -28,7 +28,7 @@ entity Supplier {
         Fax        : String;
 };
 
-entity Category {
+entity Categories {
     key ID   : String(2);
         Name : String;
 };

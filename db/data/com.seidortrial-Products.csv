@@ -1,0 +1,16 @@
+ID;Name;Description;ImageUrl;ReleaseDae;DiscontinuedDate;Price;Height;Width;Depth;Quantity
+74867162-7f5b-402a-993d-8868972b9788;Laptop Business Pro;High performance 16GB RAM;https://img.com/lp.jpg;2024-01-10T00:00:00Z;;1250.00;1.80;35.00;24.00;15
+db245595-601e-4f6c-941e-36202488a07c;Monitor UltraWide 34;Curved 4K Display;https://img.com/mon.jpg;2024-02-15T00:00:00Z;;450.99;40.00;82.00;20.00;8
+a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6;Teclado Mecánico RGB;Silent Red Switches;https://img.com/tec.jpg;2023-11-20T00:00:00Z;;89.50;3.50;44.00;13.00;50
+f9e8d7c6-b5a4-3210-9876-543210fedcba;Mouse Ergonómico;Optical 16000 DPI;https://img.com/mou.jpg;2024-03-01T00:00:00Z;;45.00;4.20;6.50;12.00;120
+12345678-1234-5678-1234-567812345678;Silla Gamer Pro;Cuero sintético negro;https://img.com/sil.jpg;2023-05-10T00:00:00Z;;299.00;130.00;70.00;70.00;10
+87654321-4321-8765-4321-876543218765;Escritorio Eléctrico;Altura regulable;https://img.com/esc.jpg;2023-08-25T00:00:00Z;;550.00;75.00;140.00;80.00;5
+1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6;Impresora Láser;Blanco y negro 40ppm;https://img.com/imp.jpg;2022-12-01T00:00:00Z;;180.00;25.00;40.00;38.00;12
+z1y2x3w4-v5u4-t3s2-r1q0-p9o8n7m6l5k4;Webcam 4K;Streaming Ready;https://img.com/web.jpg;2024-01-05T00:00:00Z;;110.00;5.00;8.00;4.00;25
+m1n2o3p4-q5r6-s7t8-u9v0-w1x2y3z4a5b6;Auriculares Noise Cancelling;Bluetooth 5.2;https://img.com/aur.jpg;2023-10-15T00:00:00Z;;220.00;18.00;16.00;8.00;40
+c1v2b3n4-m5l6-k7j8-h9g0-f1d2s3a4p5o6;Disco Duro Externo 2TB;USB-C Fast Transfer;https://img.com/dd.jpg;2023-09-20T00:00:00Z;;75.00;1.20;8.00;11.00;60
+p1o2i3u4-y5t6-r7e8-w9q0-a1s2d3f4g5h6;Adaptador Multi-puerto;HDMI, USB, SD;https://img.com/hub.jpg;2024-02-28T00:00:00Z;;35.00;1.00;10.00;3.00;100
+l1k2j3h4-g5f6-d7s8-a9p0-o1i2u3y4t5r6;Tablet de Dibujo;1024 niveles presión;https://img.com/tab.jpg;2023-06-12T00:00:00Z;;150.00;0.80;25.00;15.00;18
+q1w2e3r4-t5y6-u7i8-o9p0-a1s2d3f4g5h6;Micrófono de Condensador;Para Podcast;https://img.com/mic.jpg;2023-04-30T00:00:00Z;;95.00;20.00;6.00;6.00;30
+z1x2c3v4-b5n6-m7l8-k9j0-h1g2f3d4s5a6;Soporte para Monitor;Brazo doble articulado;https://img.com/sop.jpg;2023-07-22T00:00:00Z;;65.00;40.00;10.00;10.00;45
+v1b2n3m4-l5k6-j7h8-g9f0-d1s2a3p4o5i6;Router WiFi 6;Alta velocidad;https://img.com/rou.jpg;2024-01-20T00:00:00Z;;125.00;4.00;20.00;15.00;20
