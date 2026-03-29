@@ -1,0 +1,36 @@
+<mvc:View controllerName="com.seidor.trial.productsui5.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <content>
+        <Table id="idProductsTable" 
+       sticky="HeaderToolbar,ColumnHeaders"
+       items="{path: '/Products'}"> <headerToolbar>
+        <OverflowToolbar id="idMainToolbar">
+            <Title id="idTableTitle" text="Inventario de Productos (Seidor Trial)"/>
+            <ToolbarSpacer id="idSpacer" />
+            <SearchField id="idSearchField" 
+                 width="30%" 
+                 liveChange=".onSearch" 
+                 placeholder="Buscar por nombre..."/>
+            <Button icon="sap-icon://refresh" press="onRefresh"/>
+        </OverflowToolbar>
+    </headerToolbar>
+    <columns>
+        <Column><Text text="Producto"/></Column>
+        <Column hAlign="End"><Text text="Precio"/></Column>
+        <Column hAlign="Center"><Text text="Stock"/></Column>
+    </columns>
+    <items>
+        <ColumnListItem>
+            <cells>
+                <ObjectIdentifier title="{Name}" text="{ID}"/>
+                <ObjectNumber number="{Price}" unit="USD"/>
+                <Text text="{Quantity}"/>
+            </cells>
+        </ColumnListItem>
+    </items>
+</Table>
+    </content>
+    </Page>
+</mvc:View>

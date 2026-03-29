@@ -1,11 +1,20 @@
 namespace com.seidortrial;
 
+type Address {
+    Street     : String;
+    City       : String;
+    State      : String(2);
+    PostalCode : String(5);
+    Country    : String(3);
+};
+
+
 entity Products {
     key ID               : UUID;
-        Name             : String;
+        Name             : String not null;
         Description      : String;
         ImageUrl         : String;
-        ReleaseDae       : DateTime;
+        ReleaseDae       : DateTime default $now;
         DiscontinuedDate : DateTime;
         Price            : Decimal(16, 2);
         Height           : Decimal(16, 2);
@@ -16,16 +25,12 @@ entity Products {
 };
 
 entity Suppliers {
-    key ID         : String(10);
-        Name       : String;
-        Street     : String;
-        City       : String;
-        State      : String(2);
-        PostalCode : String(5);
-        Country    : String(3);
-        Email      : String;
-        Phone      : String;
-        Fax        : String;
+    key ID      : String(10);
+        Name    : String;
+        Address : Address;
+        Email   : String;
+        Phone   : String;
+        Fax     : String;
 };
 
 entity Categories {
@@ -66,7 +71,7 @@ entity ProductReview {
 };
 
 entity SalesData {
-    key ID: UUID;
+    key ID           : UUID;
         DeliveryDate : DateTime;
         Revenue      : Decimal(16, 2);
 };

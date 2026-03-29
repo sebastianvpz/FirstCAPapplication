@@ -1,4 +1,3 @@
-ID;Name;Street;City;State;PostalCode;Country;Email;Phone;Fax
+ID;Name;address_Street;address_City;address_State;address_PostalCode;address_Country;Email;Phone;Fax
 S001;Global Tech Corp;Av. Las Artes 456;Lima;LI;15001;PER;ventas@gtech.com;+511999888;+511999887
 S002;Euro Logistics;Calle Mayor 12;Madrid;MA;28001;ESP;info@euro.es;+3491234567;+3491234568
-S003;Pacific Imports;Main Street 789;Tokyo;TK;10001;JPN;orders@pacific.jp;+813123456;+813123457
