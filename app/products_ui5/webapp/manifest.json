@@ -55,6 +55,11 @@
       "compact": true,
       "cozy": true
     },
+    "rootView": {
+      "viewName": "com.seidor.trial.productsui5.view.App",
+      "type": "XML",
+      "async": true
+    },
     "models": {
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
@@ -93,25 +98,31 @@
       },
       "routes": [
         {
-          "name": "RouteMain",
-          "pattern": ":?query:",
-          "target": [
-            "TargetMain"
-          ]
+            "name": "RouteMain",
+            "pattern": "",
+            "target": ["TargetMain"]
+        },
+        {
+            "name": "RouteCreate",
+            "pattern": "Product/Create",
+            "target": ["TargetDetail"]
+        },
+        {
+            "name": "RouteDetail",
+            "pattern": "Product({productID})",
+            "target": ["TargetDetail"]
         }
       ],
       "targets": {
         "TargetMain": {
           "id": "Main",
           "name": "Main"
+        },
+        "TargetDetail": {
+          "id": "Detail",
+          "name": "Detail"
         }
       }
-    },
-    "rootView": {
-      "viewName": "com.seidor.trial.productsui5.view.App",
-      "type": "XML",
-      "id": "App",
-      "async": true
     }
   }
 }

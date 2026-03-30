@@ -1,36 +1,96 @@
-<mvc:View controllerName="com.seidor.trial.productsui5.controller.Main"
+<mvc:View
+    controllerName="com.seidor.trial.productsui5.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    <content>
-        <Table id="idProductsTable" 
-       sticky="HeaderToolbar,ColumnHeaders"
-       items="{path: '/Products'}"> <headerToolbar>
-        <OverflowToolbar id="idMainToolbar">
-            <Title id="idTableTitle" text="Inventario de Productos (Seidor Trial)"/>
-            <ToolbarSpacer id="idSpacer" />
-            <SearchField id="idSearchField" 
-                 width="30%" 
-                 liveChange=".onSearch" 
-                 placeholder="Buscar por nombre..."/>
-            <Button icon="sap-icon://refresh" press="onRefresh"/>
-        </OverflowToolbar>
-    </headerToolbar>
-    <columns>
-        <Column><Text text="Producto"/></Column>
-        <Column hAlign="End"><Text text="Precio"/></Column>
-        <Column hAlign="Center"><Text text="Stock"/></Column>
-    </columns>
-    <items>
-        <ColumnListItem>
-            <cells>
-                <ObjectIdentifier title="{Name}" text="{ID}"/>
-                <ObjectNumber number="{Price}" unit="USD"/>
-                <Text text="{Quantity}"/>
-            </cells>
-        </ColumnListItem>
-    </items>
-</Table>
-    </content>
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+
+    >
+        <content>
+            <VBox class="sapUiResponsiveMargin">
+                <Table
+                    id="idProductsTable"
+                    sticky="HeaderToolbar,ColumnHeaders"
+                    items="{path: '/Products'}"
+                >
+                    <headerToolbar>
+                        <OverflowToolbar id="idMainToolbar">
+                            <Title
+                                id="idTableTitle"
+                                text="Inventario de Productos (Seidor Trial)"
+                            />
+                            <ToolbarSpacer id="idSpacer" />
+
+                            <Button
+                                id="idAddButton"
+                                icon="sap-icon://add"
+                                text="Agregar Producto"
+                                type="Transparent"
+                                press="onNavCreate"
+                            />
+                            <SearchField
+                                id="idSearchField"
+                                width="30%"
+                                liveChange=".onSearch"
+                                placeholder="Buscar por nombre..."
+                            />
+
+                            <Button
+                                icon="sap-icon://refresh"
+                                press="onRefresh"
+                            />
+                        </OverflowToolbar>
+                    </headerToolbar>
+                    <columns>
+                        <Column id="idColName">
+                            <Text text="Producto" />
+                        </Column>
+                        <Column
+                            id="idColPrice"
+                            hAlign="End"
+                        >
+                            <Text text="Precio" />
+                        </Column>
+                        <Column
+                            id="idColStock"
+                            hAlign="Center"
+                        >
+                            <Text text="Stock" />
+                        </Column>
+                        <Column
+                            id="idColAction"
+                            width="3rem"
+                        />
+                    </columns>
+                    <items>
+                        <ColumnListItem
+                            id="idProductListItem"
+                            type="Navigation"
+                            press="onProductPress"
+                        >
+                            <cells>
+                                <ObjectIdentifier
+                                    title="{Name}"
+                                    text="{ID}"
+                                />
+                                <ObjectNumber
+                                    number="{Price}"
+                                    unit="USD"
+                                />
+                                <Text text="{Quantity}" />
+                                <Button
+                                    id="idDeleteRow"
+                                    icon="sap-icon://delete"
+                                    type="Transparent"
+                                    press="onDeleteProduct"
+                                />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
     </Page>
 </mvc:View>

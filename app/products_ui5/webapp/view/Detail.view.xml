@@ -1,0 +1,71 @@
+<mvc:View
+    controllerName="com.seidor.trial.productsui5.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Page
+        id="idDetailPage"
+        title="{= ${view>/isCreate} ? 'Crear Nuevo Producto' : 'Editar Producto' }"
+        showNavButton="true"
+        navButtonPress=".onNavBack"
+    >
+        <content>
+            <VBox
+                alignItems="Center"
+                class="sapUiSmallMargin"
+            >
+                <f:SimpleForm
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                >
+                    <f:content>
+                        <Label
+                            text="ID"
+                            visible="{= !${view>/isCreate} }"
+                        />
+                        <Text
+                            text="{ID}"
+                            visible="{= !${view>/isCreate} }"
+                        />
+
+                        <Label text="Nombre del Producto" />
+                        <Input value="{Name}" />
+
+                        <Label text="Precio" />
+                        <Input
+                            value="{
+                        path: 'Price',
+                        type: 'sap.ui.model.type.Float',
+                        formatOptions: { groupingEnabled: false }
+                    }"
+                            type="Number"
+                            description="USD"
+                        />
+
+                        <Label text="Cantidad disponible" />
+                        <Input
+                            value="{Quantity}"
+                            type="Number"
+                        />
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button
+                    text="Cancelar"
+                    press="onCancel"
+                />
+                <ToolbarSpacer />
+                <Button
+                    text="{= ${view>/isCreate} ? 'Crear Producto' : 'Guardar Cambios' }"
+                    type="Accept"
+                    press="onSave"
+                />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
